@@ -2,7 +2,7 @@ import { createAction, props } from "@ngrx/store";
 import { Task } from "src/app/task-list/task.model";
 
 export const addTask = createAction(
-    '[Task] Add Task',
+    '[Task] Add Task', //visible on Redux toolkit dev tool
     props<{ content: string }>()
 );
 
