@@ -17,7 +17,7 @@ export class TaskEffects {
             switchMap(() =>
                 from(this.taskService.getTasks()).pipe(
                     map((tasks) => loadTaskSuccess({ tasks })),
-                    catchError((error) => of(loadTaskFailure({ error: error.message ?? 'Failed to load tasks' })))
+                    catchError((error) => of(loadTaskFailure({ error: error?.message ?? 'Failed to load tasks' })))
                 )
             )
         )
